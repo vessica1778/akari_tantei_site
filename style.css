@@ -133,7 +133,7 @@
   .stamp{
     position:absolute; top:70px; right:24px;
     width:150px; height:150px;
-    border:3px solid var(--thread-bright);
+    border:3px solid var(--brass-bright);
     border-radius:50%;
     display:flex; align-items:center; justify-content:center;
     transform:rotate(-14deg);
@@ -142,7 +142,7 @@
   }
   .stamp-text{
     font-family:'Courier Prime', monospace;
-    font-size:13px; color:var(--thread-bright);
+    font-size:13px; color:var(--brass-bright);
     line-height:1.5; letter-spacing:.08em; font-weight:700;
   }
   @media (max-width:760px){ .stamp{position:static; transform:rotate(-6deg) scale(.85); margin-bottom:32px;} }
@@ -321,29 +321,4 @@
   @media (max-width:700px){
     .plan-grid{grid-template-columns:1fr;}
     .plan-card{border-right:none; border-bottom:1px solid var(--panel-line);}
-    .plan-card:last-child{border-bottom:none;}
-  }
-
-  /* ---------- Confirmation document badge (replaces 100% stamp) ---------- */
-  .doc-badge{
-    width:120px; height:120px; margin:0 auto;
-    border:2px solid var(--brass-bright);
-    border-radius:var(--radius);
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    gap:8px;
-    position:relative;
-  }
-  .doc-badge::before{
-    content:"";
-    position:absolute; top:0; right:0;
-    width:0; height:0;
-    border-style:solid;
-    border-width:0 18px 18px 0;
-    border-color:transparent var(--ink) transparent transparent;
-    background:var(--brass-bright);
-  }
-  .doc-badge .doc-icon{font-size:30px; color:var(--brass-bright);}
-  .doc-badge .doc-label{
-    font-family:'Courier Prime', monospace; font-size:10px; color:var(--paper-dim);
-    letter-spacing:.1em; text-align:center; line-height:1.5;
-  }
+    .plan-card:
