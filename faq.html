@@ -43,6 +43,18 @@
         <p class="faq-a">ご相談内容・お客様情報は探偵業法および社内規定に基づき厳格に管理しており、第三者に開示することはありません。</p>
       </details>
       <details class="faq-item">
+        <summary class="faq-q"><span><span class="q-mark">Q.</span> 復縁工作の成功率はどれくらいですか？</span><span class="faq-icon">＋</span></summary>
+        <p class="faq-a">累計実績で7割以上のお客様が復縁に至っています。ただし対象者との関係性や状況により結果は変動するため、事前面談で個別に見込みをご説明します。</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q"><span><span class="q-mark">Q.</span> どのような方法で工作を行うのですか？</span><span class="faq-icon">＋</span></summary>
+        <p class="faq-a">対象者への心理的アプローチと行動面でのサポートを組み合わせ、自然な形での関係修復・改善を図ります。強引な接触や脅迫的な手段は一切用いません。</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q"><span><span class="q-mark">Q.</span> 復縁工作・別れさせ工作は違法ではありませんか？</span><span class="faq-icon">＋</span></summary>
+        <p class="faq-a">違法ではありません。脅迫や暴力といった犯罪行為ではなく、心理面への働きかけを通じて相手の気持ちの変化を促す手法のみを用いており、公序良俗にも反しない範囲で実施しています。</p>
+      </details>
+      <details class="faq-item">
         <summary class="faq-q"><span><span class="q-mark">Q.</span> 全額返金保証の対象条件は？</span><span class="faq-icon">＋</span></summary>
         <p class="faq-a">事前診断で受任した案件のうち、契約書に定めた条件・期間内に成果が得られなかった場合が対象です。詳細は<a href="guarantee.html" style="color:var(--brass-bright);">保証ページ</a>をご覧ください。</p>
       </details>
@@ -89,3 +101,12 @@
   <span style="display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 0;font-size:11px;color:#5a6272;"><span class="ico" style="color:#5a6272;">◎</span>準備中</span>
 </div>
 
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
