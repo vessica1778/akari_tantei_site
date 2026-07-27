@@ -170,4 +170,4 @@
   .file-list{display:flex; flex-direction:column; gap:0;}
   .file-row{
     display:grid; grid-template-columns:120px 1fr; gap:32px;
-    padding:36px 0; border-top:1px solid var(--pan
+    padding:36px 0; border-top:1px solid var(--pan 
