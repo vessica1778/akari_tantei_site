@@ -287,13 +287,13 @@
   /* ---------- Mobile menu ---------- */
   .menu-toggle{
     display:none;
-    align-items:center; gap:9px;
+    flex-direction:column; align-items:center; gap:6px;
     background:none; border:1px solid var(--paper); border-radius:var(--radius);
-    cursor:pointer; padding:9px 14px; margin:0;
+    cursor:pointer; padding:8px 14px; margin:0;
   }
   .menu-toggle .bars{display:flex; flex-direction:column; gap:4px;}
   .menu-toggle .bars span{width:16px; height:1.5px; background:var(--paper); display:block;}
-  .menu-toggle .label{font-size:10px; letter-spacing:.14em; color:var(--paper); font-weight:500;}
+  .menu-toggle .label{font-size:9px; letter-spacing:.14em; color:var(--paper); font-weight:500;}
   @media (max-width:760px){
     .menu-toggle{display:flex;}
   }
