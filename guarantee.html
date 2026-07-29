@@ -25,11 +25,13 @@
     <div class="header-cta">
       <a href="tel:08043819162" class="btn-mini">電話で相談</a>
       <button class="menu-toggle" onclick="document.getElementById('mnav').classList.toggle('open')" aria-label="メニュー">
-        <span></span><span></span><span></span>
+        <span class="label">MENU</span>
+        <span class="bars"><span></span><span></span><span></span></span>
       </button>
     </div>
   </div>
   <nav class="mobile-nav" id="mnav">
+    <a href="index.html">トップページ</a>
     <a href="index.html#service">サービス</a>
     <a href="price.html">費用</a>
     <a href="guarantee.html">全額返金保証</a>
@@ -142,9 +144,9 @@
 </footer>
 
 <div class="fixed-cta">
-  <a href="tel:08043819162"><span class="ico">☎</span>電話</a>
-  <span style="display:flex;flex-direction:column;align-items:center;gap:3px;padding:14px 0;font-size:11px;color:#b6b0a2;border-right:1px solid var(--panel-line);"><span class="ico" style="color:#b6b0a2;">✉</span>準備中</span>
-  <span style="display:flex;flex-direction:column;align-items:center;gap:3px;padding:14px 0;font-size:11px;color:#b6b0a2;"><span class="ico" style="color:#b6b0a2;">◎</span>準備中</span>
+  <a href="tel:08043819162" class="cta-tel"><span class="ico">☎</span>電話</a>
+  <span class="cta-btn cta-mail"><span class="ico">✉</span>メール</span>
+  <span class="cta-btn cta-line"><span class="ico">◎</span>LINE</span>
 </div>
 
 <script>
