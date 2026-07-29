@@ -25,11 +25,13 @@
     <div class="header-cta">
       <a href="tel:08043819162" class="btn-mini">電話で相談</a>
       <button class="menu-toggle" onclick="document.getElementById('mnav').classList.toggle('open')" aria-label="メニュー">
-        <span></span><span></span><span></span>
+        <span class="label">MENU</span>
+        <span class="bars"><span></span><span></span><span></span></span>
       </button>
     </div>
   </div>
   <nav class="mobile-nav" id="mnav">
+    <a href="index.html">トップページ</a>
     <a href="index.html#service">サービス</a>
     <a href="price.html">費用</a>
     <a href="guarantee.html">全額返金保証</a>
@@ -43,7 +45,7 @@
   <div class="wrap">
     <div class="breadcrumb"><a href="index.html">トップページ</a> ／ 費用について</div>
     <h1>費用について</h1>
-    <p>案件ごとに難易度・期間が異なるため、正式なお見積りは無料相談時にご提示します。以下は目安のプラン例です。</p>
+    <p>案件ごとに難易度・期間が異なるため、実費を含む最終的なお見積りは無料相談時にご提示します。以下は基本プランの料金です。</p>
   </div>
 </section>
 <section>
@@ -51,7 +53,7 @@
     <div class="section-head reveal">
       <span class="eyebrow">PRICE</span>
       <h2>明快な料金体系</h2>
-      <p class="section-desc">中間マージンを抑えた直接調査体制を採用しています。金額はすべて税込・目安です（仮）。</p>
+      <p class="section-desc">中間マージンを抑えた直接調査体制を採用しています。金額はすべて税込です。</p>
     </div>
 
     <div class="service-divider reveal">
@@ -129,7 +131,7 @@
       </div>
     </div>
 
-    <p class="price-note" style="margin-top:36px;">※ 上記は目安金額（仮）です。交通費・宿泊費等の実費が別途発生する場合があります。正式金額は無料相談・面談後に書面でご提示します。</p>
+    <p class="price-note" style="margin-top:36px;">※ 交通費・宿泊費等の実費が別途発生する場合があります。案件の難易度により、無料相談時に個別のお見積りをご提示します。</p>
     <div class="hero-ctas" style="margin-top:40px; margin-bottom:0;">
       <a href="contact.html" class="btn-primary">無料でお見積りを依頼する</a>
     </div>
@@ -157,4 +159,16 @@
 <div class="fixed-cta">
   <a href="tel:08043819162"><span class="ico">☎</span>電話</a>
   <span style="display:flex;flex-direction:column;align-items:center;gap:3px;padding:14px 0;font-size:11px;color:#b6b0a2;border-right:1px solid var(--panel-line);"><span class="ico" style="color:#b6b0a2;">✉</span>準備中</span>
-  
+  <span style="display:flex;flex-direction:column;align-items:center;gap:3px;padding:14px 0;font-size:11px;color:#b6b0a2;"><span class="ico" style="color:#b6b0a2;">◎</span>準備中</span>
+</div>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.15});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
