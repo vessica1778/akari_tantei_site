@@ -92,12 +92,35 @@
   <span class="cta-btn cta-line"><span class="ico">◎</span>LINE</span>
 </div>
 
+<div class="desktop-cta">
+  <a href="tel:08043819162" class="cta-tel"><span class="ico">☎</span>電話</a>
+  <span class="cta-btn cta-mail"><span class="ico">✉</span>メール</span>
+  <span class="cta-btn cta-line"><span class="ico">◎</span>LINE</span>
+</div>
+
 <script>
   const els = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:.15});
   els.forEach(el=>io.observe(el));
+
+  // ヘッダー自動開閉（下スクロールで隠す／上スクロールで表示／メニュー展開中は隠さない）
+  const siteHeader = document.querySelector('header');
+  const mnavEl = document.getElementById('mnav');
+  let lastY = window.scrollY;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (mnavEl && mnavEl.classList.contains('open')) { lastY = y; return; }
+    if (y <= 4) {
+      siteHeader.classList.remove('header-hidden');
+    } else if (y > lastY + 4 && y > 80) {
+      siteHeader.classList.add('header-hidden');
+    } else if (y < lastY - 4) {
+      siteHeader.classList.remove('header-hidden');
+    }
+    lastY = y;
+  }, { passive: true });
 </script>
 
 </body>
